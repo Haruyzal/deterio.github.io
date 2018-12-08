@@ -11,7 +11,7 @@
                'vmPFg03vkgQ'
              ];  
     var embedcode = "https://www.youtube.com/embed/youtubeid?autoplay=1&amp;showinfo=0&amp;rel=0&amp;loop=1&cc_load_policy=1&amp;controls=0"
-    var randloc = embedcode.replace("youtubeid", id[Math.floor(Math.random() * myArray.length)]);
+    var randloc = embedcode.replace("youtubeid", id[Math.floor(Math.random() * id.length)]);
     document.getElementById('video').src = randloc;
     </script>
   </body>
