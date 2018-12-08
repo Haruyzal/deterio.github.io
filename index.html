@@ -6,13 +6,13 @@
   <body>
     <iframe id="video" src="" style="position:fixed; top:0px; bottom:0px; right:0px; width: 100%; border: none; margin:0; padding:0; overflow: hidden; z-index:999999; height: 100%;"></iframe>
     <script>
-    var myArray = [
-                   'https://www.youtube.com/embed/t7MBzMP4OzY?autoplay=1&amp;showinfo=0&amp;rel=0&amp;loop=1&cc_load_policy=1&amp;controls=0', 
-                   'https://www.youtube.com/embed/dJc0vpT5UT0?autoplay=1&amp;showinfo=0&amp;rel=0&amp;loop=1&cc_load_policy=1&amp;controls=0', 
-                   'https://www.youtube.com/embed/vmPFg03vkgQ?autoplay=1&amp;showinfo=0&amp;rel=0&amp;loop=1&cc_load_policy=1&amp;controls=0'
-                  ];  
-    var rand = myArray[Math.floor(Math.random() * myArray.length)];
-    document.getElementById('video').src = rand;
+    var id = [ 't7MBzMP4OzY', 
+               'dJc0vpT5UT0', 
+               'vmPFg03vkgQ'
+             ];  
+    var embedcode = "https://www.youtube.com/embed/youtubeid?autoplay=1&amp;showinfo=0&amp;rel=0&amp;loop=1&cc_load_policy=1&amp;controls=0"
+    var randloc = embedcode.replace("youtubeid", id[Math.floor(Math.random() * myArray.length)]);
+    document.getElementById('video').src = randloc;
     </script>
   </body>
 </html>
